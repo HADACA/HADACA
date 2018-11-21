@@ -10,6 +10,7 @@ import pickle
 import numpy as np   # We recommend to use numpy arrays
 from os.path import isfile
 from sklearn.base import BaseEstimator
+from sklearn.svm import SVC
 
 class model (BaseEstimator):
     def __init__(self):
@@ -21,6 +22,7 @@ class model (BaseEstimator):
         self.num_feat=1
         self.num_labels=1
         self.is_trained=False
+        self.classifier= SVC(C=5.)
 
     def fit(self, X, y):
         '''
@@ -36,6 +38,7 @@ class model (BaseEstimator):
         Use data_converter.convert_to_num() to convert to the category number format.
         For regression, labels are continuous values.
         '''
+        self.classifier.fit(X,y)
         self.num_train_samples = X.shape[0]
         if X.ndim>1: self.num_feat = X.shape[1]
         print("FIT: dim(X)= [{:d}, {:d}]".format(self.num_train_samples, self.num_feat))
@@ -64,7 +67,7 @@ class model (BaseEstimator):
         if (self.num_feat != num_feat):
             print("ARRGH: number of features in X does not match training data!")
         print("PREDICT: dim(y)= [{:d}, {:d}]".format(num_test_samples, self.num_labels))
-        y = np.zeros([num_test_samples, self.num_labels])
+        y = self.classifier.predict(X)
         # If you uncomment the next line, you get pretty good results for the Iris data :-)
         #y = np.round(X[:,3])
         return y
