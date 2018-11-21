@@ -61,7 +61,7 @@ class model (BaseEstimator):
         Scikit-learn also has a function predict-proba, we do not require it.
         The function predict eventually can return probabilities.
         '''
-        num_te st_samples = X.shape[0]
+        num_test_samples = X.shape[0]
         if X.ndim>1: num_feat = X.shape[1]
         print("PREDICT: dim(X)= [{:d}, {:d}]".format(num_test_samples, num_feat))
         if (self.num_feat != num_feat):
