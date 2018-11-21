@@ -37,7 +37,18 @@ class model (BaseEstimator):
         The AutoML format support on-hot encoding, which also works for multi-labels problems.
         Use data_converter.convert_to_num() to convert to the category number format.
         For regression, labels are continuous values.
+        
+        
         '''
+#         print("Matrix Factorization of training set by SVD")
+#         svd = TruncatedSVD(n_components = 100)
+
+#         A = svd.fit_transform(X)
+#         T = svd.components_
+        
+#         print("Shape of A :", A.shape)
+#         print("Shape of T :", T.shape)
+
         self.classifier.fit(X,y)
         self.num_train_samples = X.shape[0]
         if X.ndim>1: self.num_feat = X.shape[1]
@@ -61,6 +72,15 @@ class model (BaseEstimator):
         Scikit-learn also has a function predict-proba, we do not require it.
         The function predict eventually can return probabilities.
         '''
+#         print("Matrix Factorization of test set by SVD")
+#         svd = TruncatedSVD(n_components = 100)
+
+#         A = svd.fit_transform(X)
+#         T = svd.components_
+        
+#         print("Shape of A :", A.shape)
+#         print("Shape of T :", T.shape)
+
         num_test_samples = X.shape[0]
         if X.ndim>1: num_feat = X.shape[1]
         print("PREDICT: dim(X)= [{:d}, {:d}]".format(num_test_samples, num_feat))
