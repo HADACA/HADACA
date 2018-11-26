@@ -1,8 +1,8 @@
 This is the sample starting kit for the HADACA challenge. 
 
-It uses a small set of patients who have been diagnotised as being at different stages of cancer, with methylation measurements as features. Those features allow the identification of cell types and proportions within cancer affected areas, which should permit classification.
+It uses a small set of patients who have been diagnosed as being at different stages of cancer, with methylation measurements as features. Those features allow the identification of cell types and proportions within cancer affected areas, which should permit classification.
 
-HADACA is grateful for the substantial help the team received from its mentors: Magali Richard, Raphael Bacher, and Isabelle Guyon. Additional specials thanks to Magali Richard and Raphael Bacher for the data set they provided us with.
+HADACA is grateful for the substantial help the team received from its mentors: Magali Richard, Raphael Bacher, and Isabelle Guyon. Additional special thanks to Magali Richard and Raphael Bacher for the data set they provided us with.
 
 Prerequisites:
 Install Anaconda Python 3.6.6 
