@@ -22,7 +22,7 @@ class model (BaseEstimator):
         self.num_feat=1
         self.num_labels=1
         self.is_trained=False
-        self.classifier= SVC(C=5.)
+        self.classifier= SVC(C=100.)
 
     def fit(self, X, y):
         '''
