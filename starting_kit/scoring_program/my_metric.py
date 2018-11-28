@@ -84,3 +84,9 @@ def bac_metric(solution, prediction, task='binary.classification'):
 def bac_multiclass(solution, prediction):
     prediction = prediction.reshape((prediction.shape[0],1))
     return bac_metric(solution, prediction, task='multiclass.classification')
+
+from sklearn import metrics
+
+def precision_score(solution, prediction):
+    prediction = prediction.reshape((prediction.shape[0],1))
+    return metrics.precision_score(solution, prediction, average='macro')
