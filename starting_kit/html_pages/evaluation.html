@@ -1,31 +1,41 @@
-
-<h1>Evaluation</h1>
-
-<p>
-The problem is a multiclass classification problem. Each sample (an Iris) is characterized by its sepal and petal
-width and length (4 features). You must predict the Iris categories: setosa, virginica, or versicolor.
-<br>
-You are given for training a data matrix X_train of dimension num_training_samples x num_features 
-and an array y_train of labels of dimension num_training_samples. You must train a model
-which predicts the labels for two test matrices X_valid and X_test. 
-
-<br>
-There are 2 phases:
-<ul>
-<li> <b>Phase 1: development phase. </b> We provide you with labeled training data and unlabeled validation and test data.
-Make predictions for both datasets. However, you will receive feed-back on your performance on the validation set only. 
-The performance of your LAST submission will be displayed on the leaderboard.
-<li> <b>Phase 2: final phase.</b> You do not need to do anything. Your last submission of phase 1 will be automatically forwarded.
-Your performance on the test set will appear on the leaderboard when the organizers finish checking the submissions. 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1404.47">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    li.li3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {-webkit-text-stroke: 0px #000000}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; line-height: 28.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Evaluation</b></span></h1>
+<p class="p2"><span class="s1">The problem is a multiclass classification problem. Each sample (a patient) is characterized by methylation informations related to the medical condition (5000 features). You must predict the cancer stage (10 categories).</span></p>
+<p class="p2"><span class="s1"><br>
+You are given for training a data matrix X_train of dimension num_training_samples x num_features and an array y_train of labels of dimension num_training_samples. You must train a model which predicts the labels for two test matrices X_valid and X_test.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+There are 2 phases:<span class="Apple-converted-space"> </span></span></p>
+<ul class="ul1">
+  <li class="li3"><span class="s2"><b></b></span><span class="s1"><b>Phase 1: development phase. </b>We provide you with labeled training data and unlabeled validation and test data. Make predictions for both datasets. However, you will receive feed-back on your performance on the validation set only. The performance of your LAST submission will be displayed on the leaderboard.<span class="Apple-converted-space"> </span></span></li>
+  <li class="li3"><span class="s2"><b></b></span><span class="s1"><b>Phase 2: final phase.</b> You do not need to do anything. Your last submission of phase 1 will be automatically forwarded. Your performance on the test set will appear on the leaderboard when the organizers finish checking the submissions.<span class="Apple-converted-space"> </span></span></li>
 </ul>
-
-This sample competition allows you to submit either:
-<ul>
-<li> Only prediction results (no code).
-<li> A pre-trained prediction model. 
-<li> A prediction model that must be trained and tested. 
+<p class="p3"><span class="s1">This sample competition allows you to submit either:</span></p>
+<ul class="ul1">
+  <li class="li3"><span class="s2"></span><span class="s1">Only prediction results (no code).<span class="Apple-converted-space"> </span></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">A pre-trained prediction model.<span class="Apple-converted-space"> </span></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">A prediction model that must be trained and tested.<span class="Apple-converted-space"> </span></span></li>
 </ul>
-
-The submissions are evaluated using the <b>accuracy</b> metric.
-</p>
-
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1">The submissions are evaluated using the <b>macro-average precision </b>metric.</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+</body>
+</html>
