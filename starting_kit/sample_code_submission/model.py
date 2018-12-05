@@ -11,6 +11,7 @@ import numpy as np   # We recommend to use numpy arrays
 from os.path import isfile
 from sklearn.base import BaseEstimator
 from sklearn.svm import SVC
+from sklearn.decomposition import TruncatedSVD
 
 class model (BaseEstimator):
     def __init__(self):
@@ -22,7 +23,8 @@ class model (BaseEstimator):
         self.num_feat=1
         self.num_labels=1
         self.is_trained=False
-        self.classifier= SVC(C=100.)
+        self.svd = TruncatedSVD(n_components = 10)
+        self.classifier= SVC(C=1.)
 
     def fit(self, X, y):
         '''
@@ -48,7 +50,8 @@ class model (BaseEstimator):
         
 #         print("Shape of A :", A.shape)
 #         print("Shape of T :", T.shape)
-
+        self.svd.fit(X)
+        X = self.svd.transform(X)
         self.classifier.fit(X,y)
         self.num_train_samples = X.shape[0]
         if X.ndim>1: self.num_feat = X.shape[1]
@@ -80,7 +83,7 @@ class model (BaseEstimator):
         
 #         print("Shape of A :", A.shape)
 #         print("Shape of T :", T.shape)
-
+        X = self.svd.transform(X)
         num_test_samples = X.shape[0]
         if X.ndim>1: num_feat = X.shape[1]
         print("PREDICT: dim(X)= [{:d}, {:d}]".format(num_test_samples, num_feat))
