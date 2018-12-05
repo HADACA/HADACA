@@ -42,14 +42,6 @@ class model (BaseEstimator):
         
         
         '''
-#         print("Matrix Factorization of training set by SVD")
-#         svd = TruncatedSVD(n_components = 100)
-
-#         A = svd.fit_transform(X)
-#         T = svd.components_
-        
-#         print("Shape of A :", A.shape)
-#         print("Shape of T :", T.shape)
         self.svd.fit(X)
         X = self.svd.transform(X)
         self.classifier.fit(X,y)
